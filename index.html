@@ -3,59 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MeguriBrew - Coming Soon</title>
+  <title>MeguriBrew - Website Coming Soon</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       height: 100vh;
-      background-color: #faf7f2;
+      background-color: #0b2f24; /* dark forest green */
       font-family: 'Poppins', sans-serif;
+      color: #e0f2e9; /* soft light green */
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      color: #5c4033;
       overflow: hidden;
     }
 
     .container {
+      animation: fadeInScale 2s ease forwards;
       opacity: 0;
-      transform: translateY(30px);
-      animation: fadeSlideIn 1.5s ease-out forwards;
+      transform: scale(0.8);
     }
 
-    .coffee {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      animation: float 3s ease-in-out infinite;
+    .ripple {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: rgba(224, 242, 233, 0.1);
+      border: 2px solid rgba(224, 242, 233, 0.3);
+      border-radius: 50%;
+      animation: rippleEffect 4s infinite ease-in-out;
+      z-index: 0;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
     }
 
     p {
       font-size: 1.5rem;
+      position: relative;
+      z-index: 1;
       margin: 0;
     }
 
-    @keyframes fadeSlideIn {
-      to {
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
       }
     }
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
+    @keyframes rippleEffect {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.5;
       }
       50% {
-        transform: translateY(-10px);
+        transform: scale(1.2);
+        opacity: 0.2;
+      }
+      100% {
+        transform: scale(0.8);
+        opacity: 0.5;
       }
     }
 
@@ -66,17 +85,18 @@
       p {
         font-size: 1.2rem;
       }
-      .coffee {
-        font-size: 3rem;
+      .ripple {
+        width: 100px;
+        height: 100px;
       }
     }
   </style>
 </head>
 <body>
+  <div class="ripple"></div>
   <div class="container">
-    <div class="coffee">☕</div>
-    <h1>MeguriBrew</h1>
-    <p>Coming soon – bringing free coffee moments to life.</p>
+    <h1>Website Coming Soon</h1>
+    <p>Every cup starts a ripple</p>
   </div>
 </body>
 </html>

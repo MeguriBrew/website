@@ -21,82 +21,47 @@
       overflow: hidden;
     }
 
-    .container {
-      animation: fadeInScale 2s ease forwards;
-      opacity: 0;
-      transform: scale(0.8);
+    .logo {
+      width: 150px; /* Adjust size of your logo */
+      margin-bottom: 20px;
+      filter: invert(34%) sepia(96%) saturate(6000%) hue-rotate(100deg) brightness(93%) contrast(89%); /* Adjust color of the logo */
     }
 
-    .ripple {
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      background: rgba(224, 242, 233, 0.1);
-      border: 2px solid rgba(224, 242, 233, 0.3);
-      border-radius: 50%;
-      animation: rippleEffect 4s infinite ease-in-out;
-      z-index: 0;
+    h1, p {
+      margin: 0;
+      line-height: 1.4; /* Reduce space between lines */
     }
 
     h1 {
       font-size: 2.8rem;
-      margin-bottom: 1rem;
-      position: relative;
-      z-index: 1;
+    }
+
+    .website-coming {
+      font-size: 2.6rem; /* Same size as MeguriBrew */
     }
 
     p {
       font-size: 1.5rem;
-      position: relative;
-      z-index: 1;
-      margin: 0;
     }
 
-    @keyframes fadeInScale {
-      0% {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes rippleEffect {
-      0% {
-        transform: scale(0.8);
-        opacity: 0.5;
-      }
-      50% {
-        transform: scale(1.2);
-        opacity: 0.2;
-      }
-      100% {
-        transform: scale(0.8);
-        opacity: 0.5;
-      }
-    }
-
+    /* Mobile responsiveness */
     @media (max-width: 600px) {
-      h1 {
+      h1, .website-coming {
         font-size: 2rem;
       }
       p {
         font-size: 1.2rem;
       }
-      .ripple {
-        width: 100px;
-        height: 100px;
+      .logo {
+        width: 120px; /* Smaller logo on mobile */
       }
     }
   </style>
 </head>
 <body>
-  <div class="ripple"></div>
-  <div class="container">
-    <h1>Website Coming Soon</h1>
-    <p>Every cup starts a ripple</p>
-  </div>
+  <img class="logo" src="meguribrew-logo.png" alt="MeguriBrew Logo"> <!-- Replace with your logo file -->
+  <h1>MeguriBrew</h1>
+  <p class="website-coming">Website Coming Soon</p>
+  <p>Every cup starts a ripple</p>
 </body>
 </html>

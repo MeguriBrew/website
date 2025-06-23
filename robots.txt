@@ -1,0 +1,19 @@
+User-Agent: *
+Disallow: /page71261015.html
+Disallow: /error
+Disallow: /page71261115.html
+Disallow: /header
+Disallow: /page71261183.html
+Disallow: /footer
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow: /tilda/cart*
+Disallow: /tilda/product*
+Disallow: /tilda/event*
+Disallow:
+
+
+Sitemap: https://meguribrew.tilda.ws/sitemap.xml

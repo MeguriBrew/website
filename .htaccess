@@ -1,7 +1,7 @@
 ErrorDocument 403 /page71261015.html
 ErrorDocument 404 /page71261015.html
 
-DirectoryIndex page69619407.html
+DirectoryIndex index.html
 
 RewriteEngine On
 

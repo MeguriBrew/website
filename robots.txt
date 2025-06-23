@@ -16,4 +16,4 @@ Disallow: /tilda/event*
 Disallow:
 
 
-Sitemap: https://meguribrew.tilda.ws/sitemap.xml
+Sitemap: https://meguribrew.comsitemap.xml

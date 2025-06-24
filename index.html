@@ -1290,12 +1290,6 @@ Contact
 							
 							
 							<form action="https://formspree.io/f/mldnpkgn" method="POST" id="waitlist-form" class="t-form js-form-process t-form_inputs-total_1">
-  <!-- Success message box -->
-  <div id="waitlist-success" class="t-form__successbox t-text t-text_md" style="display:none;">
-    <span style="font-weight: 400;">Welcome to MeguriBrew community! </span><br />
-    <span style="font-weight: 300;">We’ll notify you when MeguriBrew launches in Tokyo.</span>
-  </div>
-
   <!-- Email input -->
   <div class="t-form__inputsbox">
     <div class="t-input-group t-input-group_em">
@@ -1325,6 +1319,11 @@ Contact
     </div>
   </div>
 </form>
+							  <!-- Success message box -->
+  <div id="waitlist-success" class="t-form__successbox t-text t-text_md" style="display:none;">
+    <span style="font-weight: 400;">Welcome to MeguriBrew community! </span><br />
+    <span style="font-weight: 300;">We’ll notify you when MeguriBrew launches in Tokyo.</span>
+  </div>
 
 <script>
   const waitlistForm = document.getElementById('waitlist-form');
@@ -1342,20 +1341,8 @@ Contact
       });
 
       if (res.ok) {
-        waitlistForm.reset();
-        successBox.style.display = 'block';
-
-        // Wait 3 seconds and then hide the popup/modal
-        setTimeout(() => {
-          successBox.style.display = 'none';
-
-          // If the form is inside a popup, close the popup here
-          const popup = document.querySelector('.t-popup_show');
-          if (popup) {
-            popup.classList.remove('t-popup_show');
-            document.body.classList.remove('t-popup_opened');
-          }
-        }, 3000);
+        waitlistForm.style.display = 'none';      // hide the form
+        successBox.style.display = 'block';       // show the success message
       } else {
         alert('Error: Please check your email and try again.');
       }

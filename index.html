@@ -1287,53 +1287,86 @@ Contact
 							<div class="t1014__title t-title t-title_xxs" id="popuptitle_1115159941">Join MeguriBrew Waitlist</div>
 							<div class="t1014__descr t-descr t-descr_xs">Enter your email to be notified when MeguriBrew is launched.
 								<br />Be among the first to quietly connect through small acts of generosity.</div>
-							<form id="form1115159941" name='form1115159941' role="form" action='' method='POST' data-formactiontype="2" data-inputbox=".t-input-group" data-success-url="#start" class="t-form js-form-proccess t-form_inputs-total_1 " data-success-callback="t1014_onSuccess">
-								<input type="hidden" name="formservices[]" value="9e57be95eeefcc667f9accadbb420204" class="js-formaction-services">
-								<input type="hidden" name="tildaspec-formname" tabindex="-1" value="Waitlist">
-								<!-- @classes t-title t-text t-btn -->
-								<div class="js-successbox t-form__successbox t-text t-text_md" aria-live="polite" style="display:none;" data-success-message="&lt;span style=&quot;font-weight: 400;&quot;&gt;Welcome to MeguriBrew community! &lt;/span&gt;&lt;br /&gt;&lt;span style=&quot;font-weight: 300;&quot;&gt;We&#039;ll notify you when MeguriBrew launches in Tokyo.&lt;/span&gt;"></div>
-								<div class="t-form__inputsbox">
-									<div class=" t-input-group t-input-group_em " data-input-lid="8094719165590" data-field-type="em" data-field-name="Email">
-										<label for='input_8094719165590' class="t-input-title t-descr t-descr_md" id="field-title_8094719165590" data-redactor-toolbar="no" field="li_title__8094719165590" style="color:;">Your Email</label>
-										<div class="t-input-block " style="border-radius:9px;">
-											<input type="email" autocomplete="email" name="Email" id="input_8094719165590" class="t-input js-tilda-rule" value="" placeholder="your.email@example.com" data-tilda-req="1" aria-required="true" data-tilda-rule="email" aria-describedby="error_8094719165590" style="color:#000000;background-color:#e6e6e6;border-radius:9px;"> </div>
-										<div class="t-input-error" aria-live="polite" id="error_8094719165590"></div>
-									</div>
-									<div class="t-form__errorbox-middle">
-										<!--noindex-->
-										<div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;" data-nosnippet tabindex="-1" aria-label="Ошибки при заполнении формы">
-											<ul role="list" class="t-form__errorbox-text t-text t-text_md">
-												<li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li>
-												<li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li>
-												<li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li>
-												<li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li>
-												<li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li>
-												<li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li>
-												<li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li>
-											</ul>
-										</div>
-										<!--/noindex-->
-									</div>
-									<div class="t-form__submit">
-										<button type="submit" class="t-submit" style="color:#ffffff;background-color:#225d2d;border-radius:9px; -moz-border-radius:9px; -webkit-border-radius:9px;" data-field="buttontitle" data-buttonfieldset="button"> Join </button>
-									</div>
-								</div>
-								<div class="t-form__errorbox-bottom">
-									<!--noindex-->
-									<div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;" data-nosnippet tabindex="-1" aria-label="Ошибки при заполнении формы">
-										<ul role="list" class="t-form__errorbox-text t-text t-text_md">
-											<li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li>
-											<li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li>
-											<li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li>
-											<li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li>
-											<li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li>
-											<li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li>
-											<li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li>
-										</ul>
-									</div>
-									<!--/noindex-->
-								</div>
-							</form>
+							
+							
+							<form action="https://formspree.io/f/mldnpkgn" method="POST" id="waitlist-form" class="t-form js-form-process t-form_inputs-total_1">
+  <!-- Success message box -->
+  <div id="waitlist-success" class="t-form__successbox t-text t-text_md" style="display:none;">
+    <span style="font-weight: 400;">Welcome to MeguriBrew community! </span><br />
+    <span style="font-weight: 300;">We’ll notify you when MeguriBrew launches in Tokyo.</span>
+  </div>
+
+  <!-- Email input -->
+  <div class="t-form__inputsbox">
+    <div class="t-input-group t-input-group_em">
+      <label for="email" class="t-input-title t-descr t-descr_md">Your Email</label>
+      <div class="t-input-block" style="border-radius:9px;">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="your.email@example.com"
+          class="t-input"
+          style="color:#000000; background-color:#e6e6e6; border-radius:9px;"
+        />
+      </div>
+    </div>
+
+    <!-- Submit button -->
+    <div class="t-form__submit">
+      <button
+        type="submit"
+        class="t-submit"
+        style="color:#ffffff; background-color:#225d2d; border-radius:9px;"
+      >
+        Join
+      </button>
+    </div>
+  </div>
+</form>
+
+<script>
+  const waitlistForm = document.getElementById('waitlist-form');
+  const successBox = document.getElementById('waitlist-success');
+
+  waitlistForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const data = new FormData(waitlistForm);
+
+    try {
+      const res = await fetch(waitlistForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        waitlistForm.reset();
+        successBox.style.display = 'block';
+
+        // Wait 3 seconds and then hide the popup/modal
+        setTimeout(() => {
+          successBox.style.display = 'none';
+
+          // If the form is inside a popup, close the popup here
+          const popup = document.querySelector('.t-popup_show');
+          if (popup) {
+            popup.classList.remove('t-popup_show');
+            document.body.classList.remove('t-popup_opened');
+          }
+        }, 3000);
+      } else {
+        alert('Error: Please check your email and try again.');
+      }
+    } catch (err) {
+      alert('Something went wrong. Please try again later.');
+    }
+  });
+</script>
+						
+							
+							
 							<style>
 							#rec1115159941 input::-webkit-input-placeholder {
 								color: #000000;
